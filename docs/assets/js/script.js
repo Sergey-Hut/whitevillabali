@@ -227,32 +227,12 @@
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") setMenu(false); });
   })();
 
-  /* ---- contact form → whatsapp ---- */
+  /* ---- contact form: clear field errors on input; SUBMIT handled in i18n.js (popup + relay + language) ---- */
   (function () {
     var f = document.getElementById("bookForm");
     if (!f) return;
-    var WA = "6282342182361";
-    var toast = document.getElementById("toast");
-    function showToast(m) { if (!toast) return; toast.textContent = m; toast.classList.add("is-show"); setTimeout(function () { toast.classList.remove("is-show"); }, 3600); }
-    function field(n) { return f.querySelector('[name="' + n + '"]'); }
-    f.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var name = field("name").value.trim(), contact = field("contact").value.trim(), msg = field("msg").value.trim();
-      var ok = true;
-      ["name", "contact"].forEach(function (n) {
-        var wrap = field(n).parentNode;
-        if (!field(n).value.trim()) { wrap.classList.add("is-err"); ok = false; } else wrap.classList.remove("is-err");
-      });
-      if (!ok) return;
-      var text = "Здравствуйте! Хочу записаться на частный показ White Villa Bali.\nИмя: " + name + "\nКонтакт: " + contact;
-      if (msg) text += "\nСообщение: " + msg;
-      showToast("Спасибо! Открываем WhatsApp…");
-      var url = "https://wa.me/" + WA + "?text=" + encodeURIComponent(text);
-      setTimeout(function () { window.open(url, "_blank"); }, 650);
-      f.reset();
-    });
     f.querySelectorAll("input,textarea").forEach(function (el) {
-      el.addEventListener("input", function () { el.parentNode.classList.remove("is-err"); });
+      el.addEventListener("input", function () { var w = el.closest(".field"); if (w) w.classList.remove("is-err"); });
     });
   })();
 
