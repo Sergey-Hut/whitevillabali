@@ -8,7 +8,7 @@
   /* ============ CONFIG ============ */
   // Lead relay endpoint (serverless function that forwards the form to the Telegram group).
   // Leave "" until deployed → form falls back to opening WhatsApp with the lead text.
-  var LEAD_ENDPOINT = "";
+  var LEAD_ENDPOINT = "https://wvb-relay.vercel.app/api/lead";
   var WA_NUMBER = "6282342182361";
 
   /* ============ WHATSAPP PREFILLED MESSAGES (per button intent × language) ============ */

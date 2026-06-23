@@ -201,8 +201,9 @@
       setActive(i);
     }
     var prev = sld.querySelector(".sld__prev"), next = sld.querySelector(".sld__next");
-    if (prev) prev.addEventListener("click", function () { go(cur - 1); });
-    if (next) next.addEventListener("click", function () { go(cur + 1); });
+    // looped navigation: wrap around at both ends
+    if (prev) prev.addEventListener("click", function () { go((cur - 1 + n) % n); });
+    if (next) next.addEventListener("click", function () { go((cur + 1) % n); });
     var tmr;
     track.addEventListener("scroll", function () {
       clearTimeout(tmr);
