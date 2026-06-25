@@ -11,11 +11,9 @@
 <link rel="alternate" hreflang="id" href="https://whitevillabali.com/id/" />
 <link rel="alternate" hreflang="x-default" href="https://whitevillabali.com/en/" />
 <script>
-(function(){
-  var l; try{ l = localStorage.getItem('wv_lang'); }catch(e){}
-  if (l!=='ru' && l!=='en' && l!=='id') l='en';   /* English is the default */
-  location.replace('/'+l+'/'+(location.hash||''));
-})();
+/* English is the default front door — always open /en/ regardless of any saved choice.
+   Visitors reach other languages via the switcher or direct /id/ /ru/ links. */
+location.replace('/en/' + (location.hash || ''));
 </script>
 <meta http-equiv="refresh" content="0; url=/en/" />
 <style>html,body{margin:0;background:#E7E0D2}</style>
