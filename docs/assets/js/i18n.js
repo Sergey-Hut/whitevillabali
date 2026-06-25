@@ -1,5 +1,7 @@
-/* White Villa Bali — i18n (RU source → EN/ID), browser-language auto-detect,
-   language switch, per-language WhatsApp text, request popup + form handling.
+/* White Villa Bali — i18n (RU source → EN/ID). Default language = EN.
+   Language is resolved from the URL folder (/en/ /id/ /ru/ via window.WV_FORCE_LANG),
+   then a returning visitor's saved choice, else EN. Switcher rewrites the URL (pushState).
+   Per-language WhatsApp text, request popup + form handling.
    Retrofit approach: translate by matching the original RU text of each text node
    against a dictionary — no markup changes needed. Missing keys gracefully stay RU. */
 (function () {
@@ -467,16 +469,22 @@
     setWaLinks(lang);
     setLangButtons(lang);
     document.documentElement.setAttribute("lang", lang);
-    try { localStorage.setItem("wv_lang", lang); } catch (e) {}
     document.documentElement.setAttribute("data-lang", lang);
   }
 
+  function isLang(l) { return l === "ru" || l === "en" || l === "id"; }
+  function langFromPath() {
+    var m = (location.pathname || "").match(/\/(en|id|ru)(\/|$)/i);
+    return m ? m[1].toLowerCase() : "";
+  }
   function detect() {
+    // 1) URL language folder (/en/ /id/ /ru/) or shell-forced var = authoritative
+    if (isLang(window.WV_FORCE_LANG)) return window.WV_FORCE_LANG;
+    var p = langFromPath(); if (p) return p;
+    // 2) a returning visitor's explicit choice
     var saved; try { saved = localStorage.getItem("wv_lang"); } catch (e) {}
-    if (saved && DICT[saved] !== undefined || saved === "ru") return saved;
-    var n = (navigator.language || navigator.userLanguage || "ru").slice(0, 2).toLowerCase();
-    if (n === "ru") return "ru";
-    if (n === "id" || n === "in") return "id"; // Indonesian historic code "in"
+    if (isLang(saved)) return saved;
+    // 3) English is the default language (no browser auto-detect)
     return "en";
   }
 
@@ -559,12 +567,22 @@
   }
 
   /* ============ LANG SWITCH WIRING ============ */
+  function go(l) {
+    if (!isLang(l)) return;
+    try { localStorage.setItem("wv_lang", l); } catch (e) {} // remember explicit choice
+    apply(l);
+    // reflect the language in the URL bar: /en/ /id/ /ru/ (only when served with lang folders)
+    if (window.WV_LANG_ROUTING) {
+      try { history.pushState({ lang: l }, "", "/" + l + "/" + (location.hash || "")); } catch (e) {}
+    }
+  }
   function wireSwitch() {
     document.querySelectorAll(".nav__lang button").forEach(function (b) {
-      b.addEventListener("click", function () {
-        var l = b.textContent.trim().toLowerCase();
-        if (l === "ru" || l === "en" || l === "id") apply(l);
-      });
+      b.addEventListener("click", function () { go(b.textContent.trim().toLowerCase()); });
+    });
+    window.addEventListener("popstate", function (e) {
+      var l = (e.state && e.state.lang) || langFromPath() || detect();
+      if (isLang(l)) apply(l);
     });
   }
 
