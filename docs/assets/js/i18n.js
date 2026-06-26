@@ -561,6 +561,7 @@
         // fallback until relay deployed: open WhatsApp with the lead so it isn't lost
         window.open("https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text), "_blank");
       }
+      track("generate_lead", "Lead"); // analytics: form lead conversion (GA4 + Pixel + Metrica)
       showPopup();
       form.reset();
     });
@@ -571,6 +572,7 @@
     if (!isLang(l)) return;
     try { localStorage.setItem("wv_lang", l); } catch (e) {} // remember explicit choice
     apply(l);
+    track("lang_" + l); // analytics: language switch
     // reflect the language in the URL bar: /en/ /id/ /ru/ (only when served with lang folders)
     if (window.WV_LANG_ROUTING) {
       try { history.pushState({ lang: l }, "", "/" + l + "/" + (location.hash || "")); } catch (e) {}
@@ -586,6 +588,60 @@
     });
   }
 
+  /* ============ ANALYTICS EVENTS (GA4 + Meta Pixel + Yandex Metrica) ============ */
+  // One call → GA4 event + Yandex Metrica goal (same name) + Meta Pixel.
+  // fbStd = a Meta STANDARD event (Lead / Contact / ViewContent) for conversions; omit → Pixel custom event.
+  function track(name, fbStd) {
+    try { if (window.gtag) gtag("event", name); } catch (e) {}
+    try { if (window.fbq) { fbStd ? fbq("track", fbStd) : fbq("trackCustom", name); } } catch (e) {}
+    try { if (window.ym) ym(110156693, "reachGoal", name); } catch (e) {}
+  }
+  function wireTracking() {
+    // Form: first focus = user started a request (funnel step before the submit)
+    var form = document.getElementById("bookForm");
+    if (form) {
+      var fStarted = false;
+      form.addEventListener("focusin", function () {
+        if (!fStarted) { fStarted = true; track("form_start"); }
+      });
+    }
+    // Investment calculator: first interaction
+    var calcSent = false;
+    ["invRate", "invOcc"].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) el.addEventListener("change", function () {
+        if (!calcSent) { calcSent = true; track("calculator_use"); }
+      });
+    });
+    // Delegated click tracking — covers EVERY button/link (capture phase → always fires, even if an
+    // inner handler stops propagation). Each branch returns so events are never double-counted.
+    document.addEventListener("click", function (e) {
+      var n = e.target;
+      var a = n && n.closest ? n.closest('a[href], button, .gal__item, .pln__planimg, .vid__play, #tourMedia') : null;
+      if (!a) return;
+      var href = (a.getAttribute && a.getAttribute("href")) || "";
+      // 1) Contact conversions (Meta standard "Contact")
+      if (href.indexOf("wa.me") > -1 || href.indexOf("api.whatsapp") > -1) return track("whatsapp_click", "Contact");
+      if (href.indexOf("t.me") > -1 || href.indexOf("telegram.me") > -1) return track("telegram_click", "Contact");
+      // 2) Language buttons are tracked in go() — skip here
+      if (a.closest(".nav__lang")) return;
+      // 3) Primary CTA → private-viewing intent
+      if (href === "#contact" || (a.classList && a.classList.contains("nav__cta"))) return track("cta_viewing");
+      // 4) Content engagement (strongest signals = Meta standard "ViewContent")
+      if (a.closest(".vid__play, #tourMedia")) return track("video_play", "ViewContent");
+      if (a.closest(".gal__item")) return track("gallery_open", "ViewContent");
+      if (a.closest(".pln__planimg")) return track("plan_zoom", "ViewContent");
+      if (a.closest("#plnLevels, #plnPrev, #plnNext, .pln__mag")) return track("plans_browse");
+      if (a.closest(".sld__btn")) return track("interiors_swipe");
+      if (a.closest(".loc__actions")) return track("map_click");
+      if (a.closest(".faq__q")) return track("faq_open");
+      if (a.id === "navBurger" || a.closest("#navBurger")) return track("menu_open");
+      if (a.closest(".nav__links, .nav__panel-links")) return track("nav_click");
+      // 5) Fallback: any remaining <button> or .btn → so no button goes uncounted
+      if (a.tagName === "BUTTON" || (a.classList && a.classList.contains("btn"))) return track("button_click");
+    }, true);
+  }
+
   /* ============ INIT ============ */
   function init() {
     collect();
@@ -593,6 +649,7 @@
     observe();
     wireForm();
     wireSwitch();
+    wireTracking();
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();
