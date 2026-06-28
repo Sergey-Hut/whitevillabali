@@ -29,6 +29,96 @@
 <meta name="twitter:title" content="White Villa Bali — вилла на Буките, доходность 12–15%" />
 <meta name="twitter:description" content="Крыша 360°, бассейн, кинотеатр, 4 спальни. Под ключ — от $850 000." />
 <meta name="twitter:image" content="https://whitevillabali.com/assets/img/og-image.jpg" />
+<!-- Structured data (Schema.org) — helps Google understand the listing + brand -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://whitevillabali.com/#organization",
+      "name": "White Villa Bali",
+      "url": "https://whitevillabali.com/ru/",
+      "logo": "https://whitevillabali.com/assets/img/apple-touch-icon.png",
+      "image": "https://whitevillabali.com/assets/img/og-image.jpg",
+      "sameAs": [
+        "https://t.me/WhiteVillaBali",
+        "https://wa.me/6282342182361"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "url": "https://wa.me/6282342182361",
+        "availableLanguage": ["ru", "en", "id"]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://whitevillabali.com/#website",
+      "url": "https://whitevillabali.com/ru/",
+      "name": "White Villa Bali",
+      "inLanguage": "ru",
+      "publisher": { "@id": "https://whitevillabali.com/#organization" }
+    },
+    {
+      "@type": "SingleFamilyResidence",
+      "@id": "https://whitevillabali.com/#villa",
+      "name": "White Villa Bali",
+      "description": "Частная вилла под ключ на Буките, Бали: панорамная крыша 360° с видом на океан, бассейн и домашний кинотеатр, 4 спальни. Продажа напрямую от собственника — от $850 000.",
+      "url": "https://whitevillabali.com/ru/",
+      "image": [
+        "https://whitevillabali.com/assets/img/og-image.jpg",
+        "https://whitevillabali.com/assets/img/hero.webp",
+        "https://whitevillabali.com/assets/img/DSC01935-HDR.webp",
+        "https://whitevillabali.com/assets/img/DSC02348.webp"
+      ],
+      "numberOfBedrooms": 4,
+      "numberOfBathroomsTotal": 5,
+      "floorSize": { "@type": "QuantitativeValue", "value": 570, "unitCode": "MTK" },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Awar Awar, Ungasan",
+        "addressLocality": "Kuta Selatan",
+        "addressRegion": "Bali",
+        "postalCode": "80361",
+        "addressCountry": "ID"
+      },
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "Private swimming pool", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "360 degree rooftop with ocean view", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Home cinema", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Fully furnished", "value": true }
+      ],
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Land area", "value": 716, "unitCode": "MTK" },
+        { "@type": "PropertyValue", "name": "Built area", "value": 570, "unitCode": "MTK" },
+        { "@type": "PropertyValue", "name": "Year built", "value": 2018 }
+      ]
+    },
+    {
+      "@type": "Offer",
+      "@id": "https://whitevillabali.com/#offer",
+      "itemOffered": { "@id": "https://whitevillabali.com/#villa" },
+      "price": 850000,
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://whitevillabali.com/ru/",
+      "seller": { "@id": "https://whitevillabali.com/#organization" }
+    },
+    {
+      "@type": "RealEstateListing",
+      "@id": "https://whitevillabali.com/#listing",
+      "url": "https://whitevillabali.com/ru/",
+      "name": "White Villa Bali — turnkey private villa for sale in Ungasan, Bukit",
+      "inLanguage": "ru",
+      "datePosted": "2026-06-22",
+      "image": "https://whitevillabali.com/assets/img/og-image.jpg",
+      "about": { "@id": "https://whitevillabali.com/#villa" },
+      "offers": { "@id": "https://whitevillabali.com/#offer" }
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet" />

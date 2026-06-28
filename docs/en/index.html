@@ -29,6 +29,96 @@
 <meta name="twitter:title" content="White Villa Bali — villa in Bukit, 12–15% yield" />
 <meta name="twitter:description" content="360° rooftop, pool, cinema, 4 bedrooms. Turnkey — from $850,000." />
 <meta name="twitter:image" content="https://whitevillabali.com/assets/img/og-image.jpg" />
+<!-- Structured data (Schema.org) — helps Google understand the listing + brand -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://whitevillabali.com/#organization",
+      "name": "White Villa Bali",
+      "url": "https://whitevillabali.com/en/",
+      "logo": "https://whitevillabali.com/assets/img/apple-touch-icon.png",
+      "image": "https://whitevillabali.com/assets/img/og-image.jpg",
+      "sameAs": [
+        "https://t.me/WhiteVillaBali",
+        "https://wa.me/6282342182361"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "url": "https://wa.me/6282342182361",
+        "availableLanguage": ["ru", "en", "id"]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://whitevillabali.com/#website",
+      "url": "https://whitevillabali.com/en/",
+      "name": "White Villa Bali",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://whitevillabali.com/#organization" }
+    },
+    {
+      "@type": "SingleFamilyResidence",
+      "@id": "https://whitevillabali.com/#villa",
+      "name": "White Villa Bali",
+      "description": "Turnkey private villa in Bukit, Bali: 360 degree panoramic rooftop with ocean views, pool and home cinema, 4 bedrooms. For sale directly from the owner — from $850,000.",
+      "url": "https://whitevillabali.com/en/",
+      "image": [
+        "https://whitevillabali.com/assets/img/og-image.jpg",
+        "https://whitevillabali.com/assets/img/hero.webp",
+        "https://whitevillabali.com/assets/img/DSC01935-HDR.webp",
+        "https://whitevillabali.com/assets/img/DSC02348.webp"
+      ],
+      "numberOfBedrooms": 4,
+      "numberOfBathroomsTotal": 5,
+      "floorSize": { "@type": "QuantitativeValue", "value": 570, "unitCode": "MTK" },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Awar Awar, Ungasan",
+        "addressLocality": "Kuta Selatan",
+        "addressRegion": "Bali",
+        "postalCode": "80361",
+        "addressCountry": "ID"
+      },
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "Private swimming pool", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "360 degree rooftop with ocean view", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Home cinema", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Fully furnished", "value": true }
+      ],
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Land area", "value": 716, "unitCode": "MTK" },
+        { "@type": "PropertyValue", "name": "Built area", "value": 570, "unitCode": "MTK" },
+        { "@type": "PropertyValue", "name": "Year built", "value": 2018 }
+      ]
+    },
+    {
+      "@type": "Offer",
+      "@id": "https://whitevillabali.com/#offer",
+      "itemOffered": { "@id": "https://whitevillabali.com/#villa" },
+      "price": 850000,
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://whitevillabali.com/en/",
+      "seller": { "@id": "https://whitevillabali.com/#organization" }
+    },
+    {
+      "@type": "RealEstateListing",
+      "@id": "https://whitevillabali.com/#listing",
+      "url": "https://whitevillabali.com/en/",
+      "name": "White Villa Bali — turnkey private villa for sale in Ungasan, Bukit",
+      "inLanguage": "en",
+      "datePosted": "2026-06-22",
+      "image": "https://whitevillabali.com/assets/img/og-image.jpg",
+      "about": { "@id": "https://whitevillabali.com/#villa" },
+      "offers": { "@id": "https://whitevillabali.com/#offer" }
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
