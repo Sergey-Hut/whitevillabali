@@ -55,7 +55,7 @@
   .ag-comm .wrap{display:grid;grid-template-columns:auto 1fr;gap:clamp(26px,5vw,72px);align-items:center}
   .ag-comm__num{font-family:"Cormorant",serif;font-weight:500;color:#E8B873;
     font-size:clamp(110px,17vw,230px);line-height:.86;letter-spacing:-.02em;
-    text-shadow:0 0 26px rgba(214,160,94,.22)}
+    text-shadow:0 1px 2px rgba(0,0,0,.55),0 2px 14px rgba(0,0,0,.45),0 0 22px rgba(214,160,94,.3)}
   .ag-comm__k{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:rgba(244,239,228,.6)}
   .ag-comm__big{font-family:"Cormorant",serif;font-size:clamp(30px,4.4vw,56px);margin:.12em 0 .1em;color:var(--hero-ink)}
   .ag-comm__sub{color:rgba(244,239,228,.74);max-width:46ch;line-height:1.6;font-size:clamp(14px,1.4vw,17px)}
@@ -164,6 +164,7 @@
     .ag-comm .wrap{grid-template-columns:1fr;gap:18px}
     .ag-spec{grid-template-columns:repeat(2,1fr)}
     .ag-grid{grid-template-columns:1fr!important}
+    .ag-own::before,.ag-own::after{display:none}  /* vertical dividers make sense only in the 3-col desktop layout */
     .ag-gallery{grid-template-columns:repeat(2,1fr)}
     .ag-loc{grid-template-columns:1fr}
     .ag-loc__near{columns:1}
@@ -1061,7 +1062,7 @@ Pertanyaan & kunjungan: WhatsApp +62 823-4218-2361</pre>
       document.querySelectorAll('a[data-pdf]').forEach(function(a){ a.href = '/agents/' + f; });
     }
     function setLang(l){
-      if (LANGS.indexOf(l) < 0) l = "ru";
+      if (LANGS.indexOf(l) < 0) l = "en";
       AG.lang = l; CUR_LANG = l;
       document.documentElement.setAttribute("lang", l);
       document.querySelectorAll('[data-i18n]').forEach(function(el){ var v = pick(l, el.getAttribute('data-i18n'), BASE); if (v != null) el.innerHTML = v; });
@@ -1080,9 +1081,8 @@ Pertanyaan & kunjungan: WhatsApp +62 823-4218-2361</pre>
         var u = new URLSearchParams(location.search).get('lang'); if (u && LANGS.indexOf(u) > -1) return u;
         var s = localStorage.getItem('wvb_ag_lang'); if (s && LANGS.indexOf(s) > -1) return s;
       }catch(e){}
-      var n = (navigator.language || '').toLowerCase();
-      if (n.indexOf('ru') === 0) return 'ru';
-      if (n.indexOf('id') === 0 || n.indexOf('in') === 0) return 'id';
+      /* English is the primary language — fresh visitors always start in EN.
+         Explicit choices (URL ?lang=, switcher→localStorage) are honored above. */
       return 'en';
     }
     document.querySelectorAll('.ag-lang__b').forEach(function(b){
