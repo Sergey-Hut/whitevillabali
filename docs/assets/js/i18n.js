@@ -556,7 +556,12 @@
       if (LEAD_ENDPOINT) {
         // secure relay → Telegram group (token hidden server-side)
         fetch(LEAD_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name: name, contact: contact, msg: msg, lang: CUR, company: company, text: text }) }).catch(function () {});
+          body: JSON.stringify({ name: name, contact: contact, msg: msg, lang: CUR, company: company, text: text }) })
+          .then(function (r) { if (!r.ok) throw new Error("relay " + r.status); })
+          .catch(function () {
+            // relay failed — don't lose the lead, fall back to WhatsApp
+            window.open("https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text), "_blank");
+          });
       } else {
         // fallback until relay deployed: open WhatsApp with the lead so it isn't lost
         window.open("https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text), "_blank");
