@@ -37,9 +37,12 @@
     }
   };
   var POPUP = {
-    ru: { t: "Спасибо за заявку!", b: "Мы свяжемся с вами в ближайшее время.", c: "Закрыть" },
-    en: { t: "Thank you for your request!", b: "We'll get in touch with you shortly.", c: "Close" },
-    id: { t: "Terima kasih atas permintaan Anda!", b: "Kami akan segera menghubungi Anda.", c: "Tutup" }
+    ru: { t: "Спасибо за заявку!", b: "Мы свяжемся с вами в ближайшее время.", c: "Закрыть",
+      ft: "Не удалось отправить автоматически", fb: "Нажмите ниже, чтобы отправить заявку в WhatsApp.", fw: "Отправить в WhatsApp" },
+    en: { t: "Thank you for your request!", b: "We'll get in touch with you shortly.", c: "Close",
+      ft: "Couldn't send automatically", fb: "Tap below to send your request via WhatsApp.", fw: "Send via WhatsApp" },
+    id: { t: "Terima kasih atas permintaan Anda!", b: "Kami akan segera menghubungi Anda.", c: "Tutup",
+      ft: "Tidak terkirim otomatis", fb: "Ketuk di bawah untuk mengirim permintaan Anda lewat WhatsApp.", fw: "Kirim lewat WhatsApp" }
   };
   var LEAD_LABELS = {
     ru: { head: "Заявка с сайта White Villa Bali", name: "Имя", contact: "Контакт", msg: "Сообщение" },
@@ -513,6 +516,7 @@
       '<span class="wv-pop__mono">W<span>V</span></span>' +
       '<div class="wv-pop__check" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></div>' +
       '<h3 class="wv-pop__t"></h3><p class="wv-pop__b"></p>' +
+      '<a class="btn btn--accent wv-pop__wa" style="display:none" target="_blank" rel="noopener"></a>' +
       '<button class="btn btn--accent wv-pop__c" type="button"></button>' +
       '</div>';
     document.body.appendChild(d);
@@ -521,11 +525,23 @@
     d.querySelector(".wv-pop__c").addEventListener("click", close);
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
   }
-  function showPopup() {
+  function showPopup(waHref) {
+    // waHref set = relay failed: show a tappable WhatsApp link instead of the plain
+    // "thank you" (an auto window.open() here would be popup-blocked, it runs async in a .catch()).
     ensurePopup();
     var p = POPUP[CUR] || POPUP.ru, d = document.getElementById("wvPop");
-    d.querySelector(".wv-pop__t").textContent = p.t;
-    d.querySelector(".wv-pop__b").textContent = p.b;
+    var wa = d.querySelector(".wv-pop__wa");
+    if (waHref) {
+      d.querySelector(".wv-pop__t").textContent = p.ft;
+      d.querySelector(".wv-pop__b").textContent = p.fb;
+      wa.textContent = p.fw; wa.href = waHref;
+      wa.style.display = "";
+      wa.onclick = function () { track("generate_lead", "Lead"); };
+    } else {
+      d.querySelector(".wv-pop__t").textContent = p.t;
+      d.querySelector(".wv-pop__b").textContent = p.b;
+      wa.style.display = "none";
+    }
     d.querySelector(".wv-pop__c").textContent = p.c;
     d.classList.add("is-open"); d.setAttribute("aria-hidden", "false");
   }
@@ -557,17 +573,22 @@
         // secure relay → Telegram group (token hidden server-side)
         fetch(LEAD_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ name: name, contact: contact, msg: msg, lang: CUR, company: company, text: text }) })
-          .then(function (r) { if (!r.ok) throw new Error("relay " + r.status); })
+          .then(function (r) {
+            if (!r.ok) throw new Error("relay " + r.status);
+            track("generate_lead", "Lead"); // analytics: only fires once the relay actually confirms
+            showPopup();
+          })
           .catch(function () {
-            // relay failed — don't lose the lead, fall back to WhatsApp
-            window.open("https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text), "_blank");
+            // relay failed — don't lose the lead: show a tappable WhatsApp link
+            showPopup("https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text));
           });
       } else {
         // fallback until relay deployed: open WhatsApp with the lead so it isn't lost
+        // (synchronous call inside the submit handler — not popup-blocked, unlike an async .catch())
         window.open("https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text), "_blank");
+        track("generate_lead", "Lead");
+        showPopup();
       }
-      track("generate_lead", "Lead"); // analytics: form lead conversion (GA4 + Pixel + Metrica)
-      showPopup();
       form.reset();
     });
   }
