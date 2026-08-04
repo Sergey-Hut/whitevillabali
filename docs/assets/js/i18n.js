@@ -88,8 +88,8 @@
       "Bedroom suites with walk-in closets and bathrooms. Warm stone, wood and soft light.",
     // gallery
     "Резиденция вблизи": "The residence up close",
-    "Каждый ракурс — аргумент: архитектура, свет и океан, снятые честно, без рендеров. Ровно то, что вы получаете за $850 000.":
-      "Every angle is an argument: architecture, light and the ocean, shot honestly, no renders. Exactly what you get for $850,000.",
+    "Каждый ракурс — аргумент: архитектура, свет и океан, снятые честно, без рендеров. Ровно то, что вы получаете за US$850 000.":
+      "Every angle is an argument: architecture, light and the ocean, shot honestly, no renders. Exactly what you get for US$850,000.",
     // amenities
     "Оснащение": "Amenities", "Всё уже в доме": "Everything's already in the house",
     "От кинотеатра до мультирум-звука — вилла укомплектована под ключ. Заезжайте или сдавайте: докупать ничего не нужно.":
@@ -187,7 +187,7 @@
     "Кто может купить — иностранец или гражданин Индонезии?": "Who can buy — a foreigner or an Indonesian citizen?",
     "Оформляем под любого покупателя. Гражданам Индонезии — SHM (полная собственность). Иностранцам — Hak Pakai на физлицо или HGB через вашу компанию (PT PMA). Форму и сроки подтверждает лицензированный нотариус (PPAT).":
       "We can structure it for any buyer. Indonesian citizens — SHM (full ownership). Foreigners — Hak Pakai as an individual or HGB via your company (PT PMA). The form and terms are confirmed by a licensed notary (PPAT).",
-    "Что входит в цену $850 000?": "What's included in the $850,000 price?",
+    "Что входит в цену US$850 000?": "What's included in the US$850,000 price?",
     "Вилла под ключ: 4 спальни, 5+ санузлов, бассейн, домашний кинотеатр, крыша 360°, кухня с техникой, система Sonos, мебель, гараж на 2 авто и блок персонала. Заезжайте или сдавайте — докупать ничего не нужно.":
       "A turnkey villa: 4 bedrooms, 5+ bathrooms, pool, home cinema, 360° rooftop, a fitted kitchen, a Sonos system, furniture, a 2-car garage and staff quarters. Move in or rent — nothing left to buy.",
     "Какой доход и чем он подтверждён?": "What's the income and how is it backed?",
@@ -210,7 +210,7 @@
     "Сообщение": "Message", "(необязательно)": "(optional)", "Записаться на показ": "Book a viewing",
     "Ответим в течение часа. Без спама.": "We'll reply within an hour. No spam.",
     // footer
-    "Контакты": "Contacts", "Цена": "Price", "от $850 000": "from $850,000",
+    "Контакты": "Contacts", "Цена": "Price", "от US$850 000": "from US$850,000",
     "Напрямую от собственника, без комиссии агента.": "Directly from the owner, no agent commission."
   };
 
@@ -242,8 +242,8 @@
     "Спальни-сьюты с гардеробными и ванными. Тёплый камень, дерево и мягкий свет.":
       "Suite kamar tidur dengan walk-in closet dan kamar mandi. Batu hangat, kayu, dan cahaya lembut.",
     "Резиденция вблизи": "Residence dari dekat",
-    "Каждый ракурс — аргумент: архитектура, свет и океан, снятые честно, без рендеров. Ровно то, что вы получаете за $850 000.":
-      "Setiap sudut adalah argumen: arsitektur, cahaya, dan laut — difoto apa adanya, tanpa render. Persis seperti yang Anda dapatkan seharga $850.000.",
+    "Каждый ракурс — аргумент: архитектура, свет и океан, снятые честно, без рендеров. Ровно то, что вы получаете за US$850 000.":
+      "Setiap sudut adalah argumen: arsitektur, cahaya, dan laut — difoto apa adanya, tanpa render. Persis seperti yang Anda dapatkan seharga US$850.000.",
     "Оснащение": "Fasilitas", "Всё уже в доме": "Semua sudah ada di rumah",
     "От кинотеатра до мультирум-звука — вилла укомплектована под ключ. Заезжайте или сдавайте: докупать ничего не нужно.":
       "Dari home cinema sampai audio multiroom — vila lengkap dan siap huni. Tinggal masuk atau disewakan: tak perlu beli apa pun lagi.",
@@ -334,7 +334,7 @@
     "Кто может купить — иностранец или гражданин Индонезии?": "Siapa yang bisa membeli — asing atau WNI?",
     "Оформляем под любого покупателя. Гражданам Индонезии — SHM (полная собственность). Иностранцам — Hak Pakai на физлицо или HGB через вашу компанию (PT PMA). Форму и сроки подтверждает лицензированный нотариус (PPAT).":
       "Bisa untuk pembeli mana pun. WNI — SHM (kepemilikan penuh). Asing — Hak Pakai atas nama pribadi atau HGB via perusahaan Anda (PT PMA). Bentuk dan jangka waktunya dikonfirmasi notaris berlisensi (PPAT).",
-    "Что входит в цену $850 000?": "Apa yang termasuk dalam harga $850.000?",
+    "Что входит в цену US$850 000?": "Apa yang termasuk dalam harga US$850.000?",
     "Вилла под ключ: 4 спальни, 5+ санузлов, бассейн, домашний кинотеатр, крыша 360°, кухня с техникой, система Sonos, мебель, гараж на 2 авто и блок персонала. Заезжайте или сдавайте — докупать ничего не нужно.":
       "Vila siap huni: 4 kamar tidur, 5+ kamar mandi, kolam, home cinema, rooftop 360°, dapur lengkap, sistem Sonos, furnitur, garasi 2 mobil, dan ruang staf. Tinggal masuk atau disewakan — tak perlu beli apa pun lagi.",
     "Какой доход и чем он подтверждён?": "Berapa pendapatannya dan apa buktinya?",
@@ -355,7 +355,7 @@
     "Имя": "Nama", "Связь с вами": "Kontak Anda", "(любой способ)": "(cara apa pun)",
     "Сообщение": "Pesan", "(необязательно)": "(opsional)", "Записаться на показ": "Pesan viewing",
     "Ответим в течение часа. Без спама.": "Kami balas dalam satu jam. Tanpa spam.",
-    "Контакты": "Kontak", "Цена": "Harga", "от $850 000": "mulai $850.000",
+    "Контакты": "Kontak", "Цена": "Harga", "от US$850 000": "mulai US$850.000",
     "Напрямую от собственника, без комиссии агента.": "Langsung dari pemilik, tanpa komisi agen."
   };
 
