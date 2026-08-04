@@ -360,4 +360,17 @@
       if (e.key === "Escape" && zoom.classList.contains("is-open")) closeZoom();
     });
   }
+
+  /* ---- AUD price hint (?cur=aud) for Australian ad traffic ---- */
+  (function () {
+    if (!/[?&]cur=aud(&|$)/i.test(location.search)) return;
+    var AUD = "≈ A$1.3M"; // ~USD 850,000 at ~1.53 AUD/USD — indicative only
+    document.querySelectorAll(".ft__price, .inv__num").forEach(function (el) {
+      if (!/\$85/.test(el.textContent)) return;
+      var s = document.createElement("span");
+      s.textContent = AUD;
+      s.style.cssText = "display:block;font-size:.55em;opacity:.75;letter-spacing:.02em;margin-top:2px";
+      el.appendChild(s);
+    });
+  })();
 })();
