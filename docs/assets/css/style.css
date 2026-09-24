@@ -114,7 +114,7 @@ h1,h2{font-family:"Cormorant",Georgia,serif;font-weight:300;letter-spacing:-.01e
 @keyframes kenburns{to{transform:scale(1)}}
 .hero__veil{position:absolute;inset:0;z-index:-1;
   background:
-    linear-gradient(90deg,rgba(18,15,11,.60) 0%,rgba(18,15,11,.16) 46%,rgba(18,15,11,0) 72%),
+    linear-gradient(90deg,rgba(18,15,11,.62) 0%,rgba(18,15,11,.34) 50%,rgba(18,15,11,.08) 78%,rgba(18,15,11,0) 90%),
     linear-gradient(180deg,rgba(18,15,11,.42) 0%,rgba(18,15,11,0) 26%,rgba(18,15,11,.20) 54%,rgba(18,15,11,.84) 100%)}
 .hero__inner{padding:0 var(--pad) 4px;max-width:var(--maxw);width:100%;margin:0 auto}
 .hero__inner .eyebrow,.hero__title,.hero__sub{text-shadow:0 1px 24px rgba(14,11,8,.48)}
@@ -381,7 +381,7 @@ h1,h2{font-family:"Cormorant",Georgia,serif;font-weight:300;letter-spacing:-.01e
   .wa-sticky{display:flex}
   .hero__foot{padding-bottom:84px}
   /* mobile: lighter hero veil — keep the villa visible, darken only the bottom under the H1/price (desktop veil has a left-side scrim tuned for left-aligned text, too heavy on a narrow portrait) */
-  .hero__veil{background:linear-gradient(180deg,rgba(18,15,11,0) 0%,rgba(18,15,11,0) 24%,rgba(18,15,11,.20) 44%,rgba(18,15,11,.48) 64%,rgba(18,15,11,.82) 100%)}
+  .hero__veil{background:linear-gradient(180deg,rgba(18,15,11,.12) 0%,rgba(18,15,11,.22) 14%,rgba(18,15,11,.50) 30%,rgba(18,15,11,.58) 56%,rgba(18,15,11,.66) 74%,rgba(18,15,11,.86) 100%)}
   .hero__sub{max-width:100%}
   .hero__actions{flex-direction:column;align-items:stretch;gap:12px;width:100%}
   .hero__actions .btn{width:100%}
