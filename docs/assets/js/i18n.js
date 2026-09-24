@@ -61,6 +61,11 @@
     // hero
     "Унгасан · Букит · Бали": "Ungasan · Bukit · Bali",
     "Вилла на Буките": "A villa on the Bukit", "с доходностью": "yielding", "12–15% годовых": "12–15% a year",
+    "Вилла 716 м² на Буките": "A 716 m² villa on the Bukit",
+    "US$850 000": "US$850,000", "напрямую от собственника": "directly from the owner",
+    "Унгасан, Бали. Участок 570 м², 4 спальни, крыша 360° с видом на океан, бассейн, кинотеатр. Под ключ. Сделка через лицензированного нотариуса (PPAT).":
+      "Ungasan, Bali. 570 m² plot, 4 bedrooms, a 360° rooftop with ocean views, a pool and a home cinema. Turnkey. The deal is handled by a licensed notary (PPAT).",
+    "Получить полный пакет по вилле": "Get the full villa package",
     "4 спальни, панорамная крыша 360° с видом на океан и открытый бассейн. Под ключ — напрямую от собственника, без комиссии агента.":
       "4 bedrooms, a 360° panoramic rooftop with ocean views and an open-air pool. Turnkey — directly from the owner, no agent commission.",
     "Запросить частный показ": "Request a private viewing",
@@ -219,6 +224,11 @@
     "Инвестиции": "Investasi", "Частный показ": "Viewing privat", "Резиденция": "Residence",
     "Унгасан · Букит · Бали": "Ungasan · Bukit · Bali",
     "Вилла на Буките": "Vila di Bukit", "с доходностью": "dengan hasil", "12–15% годовых": "12–15% per tahun",
+    "Вилла 716 м² на Буките": "Vila 716 m² di Bukit",
+    "US$850 000": "US$850.000", "напрямую от собственника": "langsung dari pemilik",
+    "Унгасан, Бали. Участок 570 м², 4 спальни, крыша 360° с видом на океан, бассейн, кинотеатр. Под ключ. Сделка через лицензированного нотариуса (PPAT).":
+      "Ungasan, Bali. Lahan 570 m², 4 kamar tidur, rooftop 360° dengan pemandangan laut, kolam renang, dan home cinema. Siap huni. Transaksi melalui notaris berlisensi (PPAT).",
+    "Получить полный пакет по вилле": "Dapatkan paket lengkap vila",
     "4 спальни, панорамная крыша 360° с видом на океан и открытый бассейн. Под ключ — напрямую от собственника, без комиссии агента.":
       "4 kamar tidur, rooftop panorama 360° dengan pemandangan laut dan kolam renang terbuka. Siap huni — langsung dari pemilik, tanpa komisi agen.",
     "Запросить частный показ": "Minta viewing privat",
