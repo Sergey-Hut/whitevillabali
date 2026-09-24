@@ -121,7 +121,9 @@ h1,h2{font-family:"Cormorant",Georgia,serif;font-weight:300;letter-spacing:-.01e
 .hero__title{font-size:clamp(36px,6.2vw,84px);margin:16px 0 0;max-width:19ch}
 .hero__sub{max-width:46ch;margin:26px 0 0;font-weight:300;font-size:clamp(16px,1.5vw,19px);color:rgba(244,239,228,.9);overflow-wrap:break-word}
 .hero__actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
-@media (min-width:861px){.hero__title{max-width:26ch}.hero__sub{max-width:80ch}}
+.hero__title{text-wrap:balance}
+.hero__sub{text-wrap:pretty}
+@media (min-width:861px){.hero__title{max-width:26ch}.hero__sub{max-width:92ch}}
 .hero__foot{max-width:var(--maxw);width:100%;margin:0 auto;padding:38px var(--pad) clamp(28px,5vh,52px);
   display:flex;align-items:flex-end;justify-content:flex-end;gap:20px}
 .hero__price{font-size:15px;letter-spacing:.06em;color:rgba(244,239,228,.85)}
