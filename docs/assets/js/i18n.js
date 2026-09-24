@@ -63,10 +63,11 @@
     "Вилла на Буките": "A villa on the Bukit", "с доходностью": "yielding", "12–15% годовых": "12–15% a year",
     "Вилла 716 м² на Буките": "A 716 m² villa on the Bukit",
     "US$850 000": "US$850,000", "напрямую от собственника": "directly from the owner",
-    "Вилла на Бали без комиссии:": "No Buyer's Commission on This Bali Villa —",
-    "вы экономите $25–42 тыс.": "Save US$25–42k",
-    "Комиссия агента на Бали — 3–5% ($25–42 тыс. при этой цене) — обычно уже заложена в цену виллы. Здесь её нет: White House Villa, 716 м² в Унгасане, — US$850 000 напрямую от собственника, сделку ведёт лицензированный нотариус (PPAT).":
-      "In Bali, a 3–5% agent commission (US$25–42k at this price) is usually built into the villa price. Not here: White House Villa, 716 m² in Ungasan — US$850,000 direct from the owner, with the deal handled by a licensed notary (PPAT).",
+    "Продаёт собственник · Унгасан · Бали": "Sold by the owner · Ungasan · Bali",
+    "Вилла на Бали за US$850 000": "A Bali villa for US$850,000",
+    "— задаток у нотариуса до конца сделки": "— your deposit stays with the notary until settlement",
+    "Дом 716 м² на участке 570 м², 4 спальни, крыша 360° с видом на океан, бассейн, кинотеатр. Документы к сделке готовы, оформление ведёт лицензированный нотариус (PPAT).":
+      "A 716 m² home on a 570 m² plot: 4 bedrooms, a 360° rooftop with ocean views, a pool and a home cinema. The transaction documents are ready, and the deal is handled by a licensed notary (PPAT).",
     "Получить пакет от собственника": "Get the Owner's Info Pack",
     "Унгасан, Бали. Участок 570 м², 4 спальни, крыша 360° с видом на океан, бассейн, кинотеатр. Под ключ. Сделка через лицензированного нотариуса (PPAT).":
       "Ungasan, Bali. 570 m² plot, 4 bedrooms, a 360° rooftop with ocean views, a pool and a home cinema. Turnkey. The deal is handled by a licensed notary (PPAT).",
@@ -231,10 +232,11 @@
     "Вилла на Буките": "Vila di Bukit", "с доходностью": "dengan hasil", "12–15% годовых": "12–15% per tahun",
     "Вилла 716 м² на Буките": "Vila 716 m² di Bukit",
     "US$850 000": "US$850.000", "напрямую от собственника": "langsung dari pemilik",
-    "Вилла на Бали без комиссии:": "Vila di Bali Tanpa Komisi Pembeli —",
-    "вы экономите $25–42 тыс.": "Hemat US$25–42 Ribu",
-    "Комиссия агента на Бали — 3–5% ($25–42 тыс. при этой цене) — обычно уже заложена в цену виллы. Здесь её нет: White House Villa, 716 м² в Унгасане, — US$850 000 напрямую от собственника, сделку ведёт лицензированный нотариус (PPAT).":
-      "Di Bali, komisi agen 3–5% (US$25–42 ribu pada harga ini) biasanya sudah termasuk dalam harga vila. Di sini tidak: White House Villa, 716 m² di Ungasan — US$850.000 langsung dari pemilik, transaksi ditangani notaris/PPAT berlisensi.",
+    "Продаёт собственник · Унгасан · Бали": "Dijual langsung oleh pemilik · Ungasan · Bali",
+    "Вилла на Бали за US$850 000": "Vila di Bali seharga US$850.000",
+    "— задаток у нотариуса до конца сделки": "— uang muka aman di notaris sampai transaksi selesai",
+    "Дом 716 м² на участке 570 м², 4 спальни, крыша 360° с видом на океан, бассейн, кинотеатр. Документы к сделке готовы, оформление ведёт лицензированный нотариус (PPAT).":
+      "Rumah 716 m² di atas lahan 570 m², 4 kamar tidur, rooftop 360° dengan pemandangan laut, kolam renang, dan home cinema. Dokumen transaksi sudah siap, proses ditangani notaris berlisensi (PPAT).",
     "Получить пакет от собственника": "Minta Info Lengkap dari Pemilik",
     "Унгасан, Бали. Участок 570 м², 4 спальни, крыша 360° с видом на океан, бассейн, кинотеатр. Под ключ. Сделка через лицензированного нотариуса (PPAT).":
       "Ungasan, Bali. Lahan 570 m², 4 kamar tidur, rooftop 360° dengan pemandangan laut, kolam renang, dan home cinema. Siap huni. Transaksi melalui notaris berlisensi (PPAT).",
