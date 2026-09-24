@@ -391,16 +391,17 @@ h1,h2{font-family:"Cormorant",Georgia,serif;font-weight:300;letter-spacing:-.01e
   .nav>.nav__lang{display:none}
   .facts__grid{grid-template-columns:repeat(2,1fr)}
   .wa-sticky{display:flex}
-  .hero{padding-top:100px}
-  .hero__foot{padding-top:0;padding-bottom:112px}
+  /* mobile hero (bottom-anchored): on a 430×932 phone the eyebrow lands ~254px from the top,
+     the offer ~353px, CTAs ~700px — the spacing Sergey asked for; vh-clamps keep it sane on 812-tall phones */
+  .hero__foot{padding-top:0;padding-bottom:88px}
   .scrollcue{display:none}
   /* mobile: lighter hero veil — keep the villa visible, darken only the bottom under the H1/price (desktop veil has a left-side scrim tuned for left-aligned text, too heavy on a narrow portrait) */
   .hero__veil{background:linear-gradient(180deg,rgba(18,15,11,.12) 0%,rgba(18,15,11,.22) 14%,rgba(18,15,11,.50) 30%,rgba(18,15,11,.58) 56%,rgba(18,15,11,.66) 74%,rgba(18,15,11,.86) 100%)}
-  .hero__sub{max-width:100%;margin-top:30px}
-  .hero__actions{flex-direction:column;align-items:stretch;gap:14px;width:100%;margin-top:44px}
+  .hero__sub{max-width:100%;margin-top:26px}
+  .hero__actions{flex-direction:column;align-items:stretch;gap:14px;width:100%;margin-top:clamp(88px,13.7vh,128px)}
   .hero__actions .btn{width:100%}
-  .hero__title{font-size:clamp(28px,6.8vw,42px);max-width:100%;line-height:1.12;margin-top:22px}
-  .hero .eyebrow{letter-spacing:.22em;line-height:1.75;text-wrap:balance}
+  .hero__title{font-size:clamp(28px,6.8vw,42px);max-width:100%;line-height:1.12;margin-top:0}
+  .hero .eyebrow{white-space:nowrap;font-size:clamp(10px,2.9vw,12px);letter-spacing:.16em;line-height:1.4;margin-bottom:clamp(72px,11.4vh,106px)}
   .totop{right:23px;bottom:86px;width:48px;height:48px}
   .own__grid{grid-template-columns:1fr;gap:0}
   .own__card{padding:26px 0}
