@@ -66,6 +66,9 @@
     "Продаёт собственник · Унгасан · Бали": "Sold by the owner · Ungasan · Bali",
     "Вилла на Бали за US$850 000": "A Bali villa for US$850,000",
     "— задаток у нотариуса до конца сделки": "— your deposit stays with the notary until settlement",
+    "Задаток у нотариуса до конца сделки": "Your deposit stays with the notary until settlement",
+    "Дом 716 м² · участок 570 м² · 4 спальни · крыша 360° с видом на океан · бассейн · кинотеатр":
+      "716 m² home · 570 m² plot · 4 bedrooms · 360° rooftop with ocean views · pool · home cinema",
     "Дом 716 м² на участке 570 м², 4 спальни, крыша 360° с видом на океан, бассейн, кинотеатр.":
       "A 716 m² home on a 570 m² plot: 4 bedrooms, a 360° rooftop with ocean views, a pool and a home cinema.",
     "Документы к сделке готовы, оформление ведёт лицензированный нотариус (PPAT).":
@@ -237,6 +240,9 @@
     "Продаёт собственник · Унгасан · Бали": "Dijual oleh pemilik · Ungasan · Bali",
     "Вилла на Бали за US$850 000": "Vila di Bali seharga US$850.000",
     "— задаток у нотариуса до конца сделки": "— uang muka aman di notaris sampai transaksi selesai",
+    "Задаток у нотариуса до конца сделки": "Uang muka aman di notaris sampai transaksi selesai",
+    "Дом 716 м² · участок 570 м² · 4 спальни · крыша 360° с видом на океан · бассейн · кинотеатр":
+      "Rumah 716 m² · lahan 570 m² · 4 kamar tidur · rooftop 360° dengan pemandangan laut · kolam renang · home cinema",
     "Дом 716 м² на участке 570 м², 4 спальни, крыша 360° с видом на океан, бассейн, кинотеатр.":
       "Rumah 716 m² di atas lahan 570 m², 4 kamar tidur, rooftop 360° dengan pemandangan laut, kolam renang, dan home cinema.",
     "Документы к сделке готовы, оформление ведёт лицензированный нотариус (PPAT).":
