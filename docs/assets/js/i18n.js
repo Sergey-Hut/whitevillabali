@@ -621,6 +621,13 @@
     try { if (window.gtag) gtag("event", name); } catch (e) {}
     try { if (window.fbq) { fbStd ? fbq("track", fbStd) : fbq("trackCustom", name); } } catch (e) {}
     try { if (window.ym) ym(110156693, "reachGoal", name); } catch (e) {}
+    // OpenAI (ChatGPT Ads) pixel: form lead → standard lead_created, everything else → custom event under the same name.
+    try {
+      if (window.oaiq) {
+        if (name === "generate_lead") oaiq("measure", "lead_created", { type: "customer_action" });
+        else oaiq("measure", "custom", { type: "custom" }, { custom_event_name: name });
+      }
+    } catch (e) {}
   }
   function wireTracking() {
     // Form: first focus = user started a request (funnel step before the submit)
