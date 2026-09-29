@@ -63,7 +63,7 @@
     "Вилла на Буките": "A villa on the Bukit", "с доходностью": "yielding", "12–15% годовых": "12–15% a year",
     "Вилла 716 м² на Буките": "A 716 m² villa on the Bukit",
     "US$850 000": "US$850,000", "напрямую от собственника": "directly from the owner",
-    "Продаёт собственник · Унгасан · Бали": "Sold by the owner · Ungasan · Bali",
+    "Продаёт собственник · Унгасан · Бали": "For sale by owner · Ungasan · Bali",
     "Вилла на Бали за US$850 000": "A Bali villa for US$850,000",
     "— задаток у нотариуса до конца сделки": "— your deposit stays with the notary until settlement",
     "Задаток у нотариуса до конца сделки": "Your deposit stays with the notary until settlement",
