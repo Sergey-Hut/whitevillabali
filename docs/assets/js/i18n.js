@@ -21,9 +21,9 @@
       id: "Halo! Saya tertarik dengan White Villa Bali"
     },
     income: {
-      ru: "Здравствуйте! Интересует доход и договоры по White Villa Bali",
-      en: "Hi! I'd like the rental income figures and the contracts for White Villa Bali",
-      id: "Halo! Saya ingin melihat angka pendapatan sewa dan kontrak White Villa Bali"
+      ru: "Здравствуйте! Хочу узнать подробнее о White Villa Bali",
+      en: "Hi! I'd like to learn more about White Villa Bali",
+      id: "Halo! Saya ingin tahu lebih banyak tentang White Villa Bali"
     },
     docs: {
       ru: "Здравствуйте! Прошу пакет документов по White Villa Bali",
@@ -62,9 +62,9 @@
     "Унгасан · Букит · Бали": "Ungasan · Bukit · Bali",
     "Вилла на Буките": "A villa on the Bukit", "с доходностью": "yielding", "12–15% годовых": "12–15% a year",
     "Вилла 716 м² на Буките": "A 716 m² villa on the Bukit",
-    "US$850 000": "US$850,000", "напрямую от собственника": "directly from the owner",
+    "Rp 15,3 млрд": "IDR 15.3 bn", "напрямую от собственника": "directly from the owner",
     "Продаёт собственник · Унгасан · Бали": "For sale by owner · Ungasan · Bali",
-    "Вилла на Бали за US$850 000": "A Bali villa for US$850,000",
+    "Вилла на Бали за Rp 15,3 млрд": "A Bali villa for IDR 15.3 bn",
     "— задаток у нотариуса до конца сделки": "— your deposit stays with the notary until settlement",
     "Задаток у нотариуса до конца сделки": "Your deposit stays with the notary until settlement",
     "Дом 716 м² · участок 570 м² · 4 спальни · крыша 360° с видом на океан · бассейн · кинотеатр":
@@ -82,7 +82,7 @@
     "Запросить частный показ": "Request a private viewing",
     // facts
     "Готова к жизни и аренде": "Ready to live in and rent out",
-    "Четыре уровня вокруг света и вида. Сдана в 2018-м, передаётся под ключ — мебель, техника и система Sonos уже внутри. Заезжайте или сдавайте с первого дня.":
+    "Четыре уровня вокруг света и вида. Построена в 2018-м, передаётся под ключ — мебель, техника и система Sonos уже внутри. Заезжайте или сдавайте с первого дня.":
       "Four levels arranged around light and the view. Completed in 2018, handed over turnkey — furniture, appliances and a Sonos system already inside. Move in or rent from day one.",
     "дом": "house", "участок": "land", "спальни": "bedrooms", "санузлов": "bathrooms", "крыша": "rooftop", "год": "year",
     // video
@@ -104,8 +104,8 @@
       "Bedroom suites with walk-in closets and bathrooms. Warm stone, wood and soft light.",
     // gallery
     "Резиденция вблизи": "The residence up close",
-    "Каждый ракурс — аргумент: архитектура, свет и океан, снятые честно, без рендеров. Ровно то, что вы получаете за US$850 000.":
-      "Every angle is an argument: architecture, light and the ocean, shot honestly, no renders. Exactly what you get for US$850,000.",
+    "Каждый ракурс — аргумент: архитектура, свет и океан, снятые честно, без рендеров. Ровно то, что вы получаете за Rp 15,3 млрд.":
+      "Every angle is an argument: architecture, light and the ocean, shot honestly, no renders. Exactly what you get for IDR 15.3 bn.",
     // amenities
     "Оснащение": "Amenities", "Всё уже в доме": "Everything's already in the house",
     "От кинотеатра до мультирум-звука — вилла укомплектована под ключ. Заезжайте или сдавайте: докупать ничего не нужно.":
@@ -203,7 +203,7 @@
     "Кто может купить — иностранец или гражданин Индонезии?": "Who can buy — a foreigner or an Indonesian citizen?",
     "Оформляем под любого покупателя. Гражданам Индонезии — SHM (полная собственность). Иностранцам — Hak Pakai на физлицо или HGB через вашу компанию (PT PMA). Форму и сроки подтверждает лицензированный нотариус (PPAT).":
       "We can structure it for any buyer. Indonesian citizens — SHM (full ownership). Foreigners — Hak Pakai as an individual or HGB via your company (PT PMA). The form and terms are confirmed by a licensed notary (PPAT).",
-    "Что входит в цену US$850 000?": "What's included in the US$850,000 price?",
+    "Что входит в цену Rp 15,3 млрд?": "What's included in the IDR 15.3 bn price?",
     "Вилла под ключ: 4 спальни, 5+ санузлов, бассейн, домашний кинотеатр, крыша 360°, кухня с техникой, система Sonos, мебель, гараж на 2 авто и блок персонала. Заезжайте или сдавайте — докупать ничего не нужно.":
       "A turnkey villa: 4 bedrooms, 5+ bathrooms, pool, home cinema, 360° rooftop, a fitted kitchen, a Sonos system, furniture, a 2-car garage and staff quarters. Move in or rent — nothing left to buy.",
     "Какой доход и чем он подтверждён?": "What's the income and how is it backed?",
@@ -226,7 +226,7 @@
     "Сообщение": "Message", "(необязательно)": "(optional)", "Записаться на показ": "Book a viewing",
     "Ответим в течение часа. Без спама.": "We'll reply within an hour. No spam.",
     // footer
-    "Контакты": "Contacts", "Цена": "Price", "от US$850 000": "from US$850,000",
+    "Контакты": "Contacts", "Цена": "Price", "от Rp 15,3 млрд": "from IDR 15.3 bn",
     "Напрямую от собственника, без комиссии агента.": "Directly from the owner, no agent commission."
   };
 
@@ -236,9 +236,9 @@
     "Унгасан · Букит · Бали": "Ungasan · Bukit · Bali",
     "Вилла на Буките": "Vila di Bukit", "с доходностью": "dengan hasil", "12–15% годовых": "12–15% per tahun",
     "Вилла 716 м² на Буките": "Vila 716 m² di Bukit",
-    "US$850 000": "US$850.000", "напрямую от собственника": "langsung dari pemilik",
+    "Rp 15,3 млрд": "Rp 15,3 miliar", "напрямую от собственника": "langsung dari pemilik",
     "Продаёт собственник · Унгасан · Бали": "Dijual oleh pemilik · Ungasan · Bali",
-    "Вилла на Бали за US$850 000": "Vila di Bali seharga US$850.000",
+    "Вилла на Бали за Rp 15,3 млрд": "Vila di Bali seharga Rp 15,3 miliar",
     "— задаток у нотариуса до конца сделки": "— uang muka aman di notaris sampai transaksi selesai",
     "Задаток у нотариуса до конца сделки": "Uang muka aman di notaris sampai transaksi selesai",
     "Дом 716 м² · участок 570 м² · 4 спальни · крыша 360° с видом на океан · бассейн · кинотеатр":
@@ -255,7 +255,7 @@
       "4 kamar tidur, rooftop panorama 360° dengan pemandangan laut dan kolam renang terbuka. Siap huni — langsung dari pemilik, tanpa komisi agen.",
     "Запросить частный показ": "Minta viewing privat",
     "Готова к жизни и аренде": "Siap dihuni dan disewakan",
-    "Четыре уровня вокруг света и вида. Сдана в 2018-м, передаётся под ключ — мебель, техника и система Sonos уже внутри. Заезжайте или сдавайте с первого дня.":
+    "Четыре уровня вокруг света и вида. Построена в 2018-м, передаётся под ключ — мебель, техника и система Sonos уже внутри. Заезжайте или сдавайте с первого дня.":
       "Empat tingkat yang tertata mengikuti cahaya dan pemandangan. Selesai 2018, diserahkan siap huni — furnitur, peralatan, dan sistem Sonos sudah di dalam. Tinggal masuk atau langsung disewakan.",
     "дом": "rumah", "участок": "tanah", "спальни": "kamar tidur", "санузлов": "kamar mandi", "крыша": "rooftop", "год": "tahun",
     "Видеотур": "Video tur", "Дом за одну минуту": "Rumah dalam satu menit",
@@ -274,8 +274,8 @@
     "Спальни-сьюты с гардеробными и ванными. Тёплый камень, дерево и мягкий свет.":
       "Suite kamar tidur dengan walk-in closet dan kamar mandi. Batu hangat, kayu, dan cahaya lembut.",
     "Резиденция вблизи": "Residence dari dekat",
-    "Каждый ракурс — аргумент: архитектура, свет и океан, снятые честно, без рендеров. Ровно то, что вы получаете за US$850 000.":
-      "Setiap sudut adalah argumen: arsitektur, cahaya, dan laut — difoto apa adanya, tanpa render. Persis seperti yang Anda dapatkan seharga US$850.000.",
+    "Каждый ракурс — аргумент: архитектура, свет и океан, снятые честно, без рендеров. Ровно то, что вы получаете за Rp 15,3 млрд.":
+      "Setiap sudut adalah argumen: arsitektur, cahaya, dan laut — difoto apa adanya, tanpa render. Persis seperti yang Anda dapatkan seharga Rp 15,3 miliar.",
     "Оснащение": "Fasilitas", "Всё уже в доме": "Semua sudah ada di rumah",
     "От кинотеатра до мультирум-звука — вилла укомплектована под ключ. Заезжайте или сдавайте: докупать ничего не нужно.":
       "Dari home cinema sampai audio multiroom — vila lengkap dan siap huni. Tinggal masuk atau disewakan: tak perlu beli apa pun lagi.",
@@ -366,7 +366,7 @@
     "Кто может купить — иностранец или гражданин Индонезии?": "Siapa yang bisa membeli — asing atau WNI?",
     "Оформляем под любого покупателя. Гражданам Индонезии — SHM (полная собственность). Иностранцам — Hak Pakai на физлицо или HGB через вашу компанию (PT PMA). Форму и сроки подтверждает лицензированный нотариус (PPAT).":
       "Bisa untuk pembeli mana pun. WNI — SHM (kepemilikan penuh). Asing — Hak Pakai atas nama pribadi atau HGB via perusahaan Anda (PT PMA). Bentuk dan jangka waktunya dikonfirmasi notaris berlisensi (PPAT).",
-    "Что входит в цену US$850 000?": "Apa yang termasuk dalam harga US$850.000?",
+    "Что входит в цену Rp 15,3 млрд?": "Apa yang termasuk dalam harga Rp 15,3 miliar?",
     "Вилла под ключ: 4 спальни, 5+ санузлов, бассейн, домашний кинотеатр, крыша 360°, кухня с техникой, система Sonos, мебель, гараж на 2 авто и блок персонала. Заезжайте или сдавайте — докупать ничего не нужно.":
       "Vila siap huni: 4 kamar tidur, 5+ kamar mandi, kolam, home cinema, rooftop 360°, dapur lengkap, sistem Sonos, furnitur, garasi 2 mobil, dan ruang staf. Tinggal masuk atau disewakan — tak perlu beli apa pun lagi.",
     "Какой доход и чем он подтверждён?": "Berapa pendapatannya dan apa buktinya?",
@@ -387,7 +387,7 @@
     "Имя": "Nama", "Связь с вами": "Kontak Anda", "(любой способ)": "(cara apa pun)",
     "Сообщение": "Pesan", "(необязательно)": "(opsional)", "Записаться на показ": "Pesan viewing",
     "Ответим в течение часа. Без спама.": "Kami balas dalam satu jam. Tanpa spam.",
-    "Контакты": "Kontak", "Цена": "Harga", "от US$850 000": "mulai US$850.000",
+    "Контакты": "Kontak", "Цена": "Harga", "от Rp 15,3 млрд": "mulai Rp 15,3 miliar",
     "Напрямую от собственника, без комиссии агента.": "Langsung dari pemilik, tanpa komisi agen."
   };
 

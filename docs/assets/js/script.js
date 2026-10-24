@@ -272,15 +272,15 @@
     var rv = document.getElementById("invRateV"), ov = document.getElementById("invOccV");
     var g = document.getElementById("invGross"), nt = document.getElementById("invNet"),
         yl = document.getElementById("invYield"), pay = document.getElementById("invPay");
-    var PRICE = 850000, NETF = 0.45;
+    var PRICE = 15300000000, NETF = 0.45;
     function ru(n) { return n.toLocaleString("ru-RU"); }
     function calc() {
       var r = +rate.value, o = +occ.value / 100;
       var gross = Math.round(r * 365 * o), net = Math.round(gross * NETF);
-      rv.textContent = "$" + ru(r);
+      rv.textContent = "Rp " + ru(r);
       ov.textContent = occ.value + "%";
-      g.textContent = "$" + ru(gross);
-      nt.textContent = "$" + ru(net);
+      g.textContent = "Rp " + ru(gross);
+      nt.textContent = "Rp " + ru(net);
       yl.textContent = (net / PRICE * 100).toFixed(1).replace(".", ",") + "%";
       pay.textContent = (PRICE / net).toFixed(1).replace(".", ",") + " года";
     }
