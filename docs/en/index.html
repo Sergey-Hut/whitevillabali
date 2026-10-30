@@ -296,6 +296,72 @@
     </div>
   </section>
 
+  <!-- WALKTHROUGH -->
+  <style>
+    .wt{display:grid;grid-template-columns:minmax(0,340px) 1fr;gap:clamp(28px,4vw,56px);align-items:start;margin-top:clamp(28px,4vw,44px)}
+    .wt__media{position:relative;border-radius:6px;overflow:hidden;aspect-ratio:9/16;width:100%;max-width:340px;background:#1b1813}
+    .wt__media img{width:100%;height:100%;object-fit:cover;display:block}
+    .wt__media iframe{width:100%;height:100%;display:block;border:0}
+    .wt__play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(18,15,11,.18);border:0;cursor:pointer;transition:background .3s}
+    .wt__media:hover .wt__play{background:rgba(18,15,11,.32)}
+    .wt__play>span{width:84px;height:84px;border-radius:50%;background:rgba(244,239,228,.94);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 40px rgba(0,0,0,.3)}
+    .wt__play>span::after{content:"";border-left:24px solid #26231e;border-top:15px solid transparent;border-bottom:15px solid transparent;margin-left:7px}
+    .wt__k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.65;margin:0 0 6px}
+    .wt__chap{list-style:none;margin:0 0 26px;padding:0}
+    .wt__chap li{border-bottom:1px solid rgba(38,35,30,.14)}
+    .wt__chap button{display:flex;gap:18px;align-items:baseline;width:100%;text-align:left;background:none;border:0;cursor:pointer;padding:14px 2px;font:inherit;color:inherit}
+    .wt__chap button:hover span{color:var(--accent, #a98f63)}
+    .wt__chap b{font-weight:500;min-width:44px}
+    @media(max-width:760px){.wt{grid-template-columns:1fr;gap:26px}.wt__media{max-width:min(100%,360px);margin:0 auto}}
+  </style>
+  <section class="vid section" id="walkthrough">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Видео</p>
+      <h2 class="section__title" data-reveal>Полный обход виллы: от&nbsp;улицы до&nbsp;крыши</h2>
+      <p class="section__lead" data-reveal>Снято на телефон, без монтажа — так вы увидите виллу вживую: подъезд по дороге, фасад и бассейн, все комнаты, кинотеатр и крыша с панорамой 360°.</p>
+      <div class="wt" data-reveal>
+        <div class="wt__media" id="wtMedia">
+          <img src="/assets/img/tour-walkthrough.webp" alt="Полный видео-обход White Villa Bali" width="720" height="1280" loading="lazy" decoding="async">
+          <button type="button" class="wt__play" id="wtPlay" aria-label="Смотреть полный обход виллы"><span></span></button>
+        </div>
+        <div class="wt__side">
+          <p class="wt__k">Что в ролике · 2:47</p>
+          <ol class="wt__chap">
+            <li><button type="button" data-start="0"><b>0:00</b><span>Подъезд по дороге</span></button></li>
+            <li><button type="button" data-start="20"><b>0:20</b><span>Фасад и бассейн</span></button></li>
+            <li><button type="button" data-start="45"><b>0:45</b><span>Спальни и гостиные</span></button></li>
+            <li><button type="button" data-start="105"><b>1:45</b><span>Домашний кинотеатр</span></button></li>
+            <li><button type="button" data-start="135"><b>2:15</b><span>Лестница и верхний этаж</span></button></li>
+            <li><button type="button" data-start="155"><b>2:35</b><span>Крыша: панорама 360°, океан</span></button></li>
+          </ol>
+          <div class="sec__cta" style="justify-content:flex-start">
+            <a class="btn btn--line" href="https://youtu.be/GaRofg_1a4Y" target="_blank" rel="noopener">Смотреть на YouTube</a>
+            <a class="btn btn--accent" href="#contact" data-magnetic>Запросить частный показ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    (function(){
+      var box = document.getElementById("wtMedia");
+      if (!box) return;
+      function embed(start){
+        var ifr = document.createElement("iframe");
+        ifr.src = "https://www.youtube-nocookie.com/embed/GaRofg_1a4Y?autoplay=1&rel=0&modestbranding=1&playsinline=1&color=white&start=" + (start||0);
+        ifr.allow = "autoplay; encrypted-media; picture-in-picture";
+        ifr.allowFullscreen = true;
+        ifr.title = "Полный обход White Villa Bali";
+        box.innerHTML = ""; box.appendChild(ifr);
+      }
+      var play = document.getElementById("wtPlay");
+      if (play) play.addEventListener("click", function(){ embed(0); });
+      document.querySelectorAll(".wt__chap button").forEach(function(b){
+        b.addEventListener("click", function(){ embed(parseInt(b.getAttribute("data-start")||"0",10)); });
+      });
+    })();
+  </script>
+
   <!-- INTERIORS -->
   <section class="edi section" id="interiors">
     <div class="wrap">
