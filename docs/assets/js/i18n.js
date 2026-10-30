@@ -104,6 +104,7 @@
       "Bedroom suites with walk-in closets and bathrooms. Warm stone, wood and soft light.",
     // gallery
     "Резиденция вблизи": "The residence up close",
+    "Больше фотографий": "More photos",
     "Каждый ракурс — аргумент: архитектура, свет и океан, снятые честно, без рендеров. Ровно то, что вы получаете за Rp 15,3 млрд.":
       "Every angle is an argument: architecture, light and the ocean, shot honestly, no renders. Exactly what you get for IDR 15.3 bn.",
     // amenities
@@ -253,6 +254,7 @@
     "Спальни-сьюты с гардеробными и ванными. Тёплый камень, дерево и мягкий свет.":
       "Suite kamar tidur dengan walk-in closet dan kamar mandi. Batu hangat, kayu, dan cahaya lembut.",
     "Резиденция вблизи": "Residence dari dekat",
+    "Больше фотографий": "Foto lainnya",
     "Каждый ракурс — аргумент: архитектура, свет и океан, снятые честно, без рендеров. Ровно то, что вы получаете за Rp 15,3 млрд.":
       "Setiap sudut adalah argumen: arsitektur, cahaya, dan laut — difoto apa adanya, tanpa render. Persis seperti yang Anda dapatkan seharga Rp 15,3 miliar.",
     "Оснащение": "Fasilitas", "Всё уже в доме": "Semua sudah ada di rumah",
