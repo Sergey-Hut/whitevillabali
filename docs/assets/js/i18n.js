@@ -105,6 +105,17 @@
     // gallery
     "Резиденция вблизи": "The residence up close",
     "Больше фотографий": "More photos",
+    "Видео": "Video",
+    "Полный обход виллы: от улицы до крыши": "Full villa walkthrough: from the street to the roof",
+    "Снято на телефон, без монтажа — так вы увидите виллу вживую: подъезд по дороге, фасад и бассейн, все комнаты, кинотеатр и крыша с панорамой 360°.":
+      "Filmed on a phone, no editing — exactly as you would see it in person: the drive up the road, the facade and pool, every room, the home theater and the roof with a 360° view.",
+    "Что в ролике · 2:47": "In the video · 2:47",
+    "Подъезд по дороге": "The drive up the road",
+    "Фасад и бассейн": "Facade and pool",
+    "Спальни и гостиные": "Bedrooms and living areas",
+    "Лестница и верхний этаж": "Staircase and upper floor",
+    "Крыша: панорама 360°, океан": "Roof: 360° view, ocean",
+    "Смотреть на YouTube": "Watch on YouTube",
     "Каждый ракурс — аргумент: архитектура, свет и океан, снятые честно, без рендеров. Ровно то, что вы получаете за Rp 15,3 млрд.":
       "Every angle is an argument: architecture, light and the ocean, shot honestly, no renders. Exactly what you get for IDR 15.3 bn.",
     // amenities
@@ -255,6 +266,17 @@
       "Suite kamar tidur dengan walk-in closet dan kamar mandi. Batu hangat, kayu, dan cahaya lembut.",
     "Резиденция вблизи": "Residence dari dekat",
     "Больше фотографий": "Foto lainnya",
+    "Видео": "Video",
+    "Полный обход виллы: от улицы до крыши": "Tur lengkap vila: dari jalan hingga atap",
+    "Снято на телефон, без монтажа — так вы увидите виллу вживую: подъезд по дороге, фасад и бассейн, все комнаты, кинотеатр и крыша с панорамой 360°.":
+      "Direkam dengan ponsel, tanpa editing — persis seperti melihat langsung: jalan menuju vila, fasad dan kolam, setiap ruangan, home theater, dan atap dengan pemandangan 360°.",
+    "Что в ролике · 2:47": "Isi video · 2:47",
+    "Подъезд по дороге": "Jalan menuju vila",
+    "Фасад и бассейн": "Fasad dan kolam renang",
+    "Спальни и гостиные": "Kamar tidur dan ruang tamu",
+    "Лестница и верхний этаж": "Tangga dan lantai atas",
+    "Крыша: панорама 360°, океан": "Atap: pemandangan 360°, laut",
+    "Смотреть на YouTube": "Tonton di YouTube",
     "Каждый ракурс — аргумент: архитектура, свет и океан, снятые честно, без рендеров. Ровно то, что вы получаете за Rp 15,3 млрд.":
       "Setiap sudut adalah argumen: arsitektur, cahaya, dan laut — difoto apa adanya, tanpa render. Persis seperti yang Anda dapatkan seharga Rp 15,3 miliar.",
     "Оснащение": "Fasilitas", "Всё уже в доме": "Semua sudah ada di rumah",
